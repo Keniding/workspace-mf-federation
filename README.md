@@ -16,19 +16,19 @@
 To run the dev server for your app, use:
 
 ```sh
-npx nx serve workspace-mf-federation
+npx nx serve shell
 ```
 
 To create a production bundle:
 
 ```sh
-npx nx build workspace-mf-federation
+npx nx build shell
 ```
 
 To see all available targets to run for a project, run:
 
 ```sh
-npx nx show project workspace-mf-federation
+npx nx show project shell
 ```
 
 These targets are either [inferred automatically](https://nx.dev/concepts/inferred-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or defined in the `project.json` or `package.json` files.

@@ -1,0 +1,111 @@
+{
+  "name": "mfeui",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "app",
+  "sourceRoot": "apps/angular/mfeui/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:webpack-browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/angular/mfeui",
+        "index": "apps/angular/mfeui/src/index.html",
+        "main": "apps/angular/mfeui/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/angular/mfeui/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          {
+            "glob": "**/*",
+            "input": "apps/angular/mfeui/public"
+          }
+        ],
+        "styles": ["apps/angular/mfeui/src/styles.scss"],
+        "scripts": [],
+        "customWebpackConfig": {
+          "path": "apps/angular/mfeui/webpack.config.ts"
+        }
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "4kb",
+              "maximumError": "8kb"
+            }
+          ],
+          "outputHashing": "all",
+          "customWebpackConfig": {
+            "path": "apps/angular/mfeui/webpack.prod.config.ts"
+          }
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@nx/angular:dev-server",
+      "options": {
+        "port": 4206,
+        "publicHost": "http://localhost:4206"
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "mfeui:build:production"
+        },
+        "development": {
+          "buildTarget": "mfeui:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "buildTarget": "mfeui:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/angular/mfeui/jest.config.ts"
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "defaultConfiguration": "production",
+      "options": {
+        "buildTarget": "mfeui:build",
+        "port": 4206,
+        "watch": false
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "mfeui:build:development"
+        },
+        "production": {
+          "buildTarget": "mfeui:build:production"
+        }
+      }
+    }
+  }
+}

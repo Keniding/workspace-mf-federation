@@ -14,7 +14,44 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@workspace-mf-federation/mfefooter": [
+        "apps/angular/mfefooter/src/app/remote-entry/entry.component.ts"
+      ],
+      "@workspace-mf-federation/mfeheader": [
+        "apps/angular/mfeheader/src/app/remote-entry/entry.component.ts"
+      ],
+      "@workspace-mf-federation/mfeinfo": [
+        "apps/angular/mfeinfo/src/app/remote-entry/entry.component.ts"
+      ],
+      "@workspace-mf-federation/mfenavbar": [
+        "apps/angular/mfenavbar/src/app/remote-entry/entry.component.ts"
+      ],
+      "@workspace-mf-federation/mfeprofile": [
+        "apps/angular/mfeprofile/src/app/remote-entry/entry.component.ts"
+      ],
+      "@workspace-mf-federation/mfui": [
+        "apps/angular/mfui/src/app/remote-entry/entry.component.ts"
+      ],
+      "mfefooter/Routes": [
+        "apps/angular/mfefooter/src/app/remote-entry/entry.routes.ts"
+      ],
+      "mfeheader/Routes": [
+        "apps/angular/mfeheader/src/app/remote-entry/entry.routes.ts"
+      ],
+      "mfeinfo/Routes": [
+        "apps/angular/mfeinfo/src/app/remote-entry/entry.routes.ts"
+      ],
+      "mfenavbar/Routes": [
+        "apps/angular/mfenavbar/src/app/remote-entry/entry.routes.ts"
+      ],
+      "mfeprofile/Routes": [
+        "apps/angular/mfeprofile/src/app/remote-entry/entry.routes.ts"
+      ],
+      "mfeui/Routes": [
+        "apps/angular/mfeui/src/app/remote-entry/entry.routes.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
