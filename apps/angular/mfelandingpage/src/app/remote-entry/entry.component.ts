@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NxWelcomeComponent } from './nx-welcome.component';
+import { LandingComponent } from '../pages/landing.component';
 
 @Component({
-  imports: [CommonModule, NxWelcomeComponent],
+  imports: [CommonModule, LandingComponent],
   selector: 'app-mfelandingpage-entry',
-  template: `<app-nx-welcome></app-nx-welcome>`,
+  template: `<app-landing></app-landing>`,
+  // template: `<app-nx-welcome></app-nx-welcome>`,
 })
 export class RemoteEntryComponent {}
