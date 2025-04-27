@@ -42,6 +42,9 @@
       "mfeinfo/Routes": [
         "apps/angular/mfeinfo/src/app/remote-entry/entry.routes.ts"
       ],
+      "mfelandingpage/Routes": [
+        "apps/angular/mfelandingpage/src/app/remote-entry/entry.routes.ts"
+      ],
       "mfenavbar/Routes": [
         "apps/angular/mfenavbar/src/app/remote-entry/entry.routes.ts"
       ],

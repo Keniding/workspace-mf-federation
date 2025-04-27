@@ -5,6 +5,11 @@ import { DemoComponent } from './demo/demo.component';
 export const appRoutes: Route[] = [
   {
     path: '',
+    loadChildren: () => import('mfelandingpage/Routes')
+      .then(m => m.remoteRoutes),
+  },
+  {
+    path: 'welcome',
     component: NxWelcomeComponent,
   },
   {

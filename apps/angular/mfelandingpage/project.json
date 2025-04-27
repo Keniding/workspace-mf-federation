@@ -1,15 +1,15 @@
 {
-  "name": "mfeheader",
+  "name": "mfelandingpage",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "prefix": "app",
-  "sourceRoot": "apps/angular/mfeheader/src",
+  "sourceRoot": "apps/angular/mfelandingpage/src",
   "tags": [],
   "targets": {
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "buildTarget": "mfeheader:build"
+        "buildTarget": "mfelandingpage:build"
       }
     },
     "lint": {
@@ -19,29 +19,29 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/angular/mfeheader/jest.config.ts"
+        "jestConfig": "apps/angular/mfelandingpage/jest.config.ts"
       }
     },
     "serve-static": {
       "executor": "@nx/web:file-server",
       "defaultConfiguration": "production",
       "options": {
-        "buildTarget": "mfeheader:build",
-        "port": 4201,
+        "buildTarget": "mfelandingpage:build",
+        "port": 4207,
         "watch": false
       },
       "configurations": {
         "development": {
-          "buildTarget": "mfeheader:build:development"
+          "buildTarget": "mfelandingpage:build:development"
         },
         "production": {
-          "buildTarget": "mfeheader:build:production"
+          "buildTarget": "mfelandingpage:build:production"
         }
       }
     },
     "serve": {
       "options": {
-        "port": 4201
+        "port": 4207
       }
     }
   }
