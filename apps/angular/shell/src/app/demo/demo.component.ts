@@ -6,11 +6,12 @@ import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-demo',
+  standalone: true,
   imports: [
     FooterComponent,
     HeaderComponent,
     NavbarComponent,
-    RouterOutlet,
+    RouterOutlet
   ],
   templateUrl: './demo.component.html',
   styleUrl: './demo.component.css',

@@ -15,9 +15,7 @@ const config: ModuleFederationConfig = {
    *
    */
   remotes: [
-    // 'mfeheader',
-    // 'mfefooter',
-    // 'mfenavbar'
+
   ],
 };
 

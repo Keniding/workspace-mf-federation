@@ -1,0 +1,19 @@
+<footer class="lib-footer">
+  <div class="container">
+    <div class="footer-logo">
+      <img [src]="logoUrl" alt="Logo">
+    </div>
+
+    <div class="footer-links">
+      <a *ngFor="let link of footerLinks" [href]="link.url">{{ link.label }}</a>
+    </div>
+
+    <div class="social-icons">
+      <a *ngFor="let social of socialLinks" [href]="social.url" [attr.aria-label]="social.icon">
+        <i class="fab fa-{{ social.icon }}"></i>
+      </a>
+    </div>
+
+    <p class="copyright">© {{ currentYear }} {{ companyName }}. Todos los derechos reservados.</p>
+  </div>
+</footer>

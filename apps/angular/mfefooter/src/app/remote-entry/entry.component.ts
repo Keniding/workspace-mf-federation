@@ -1,10 +1,21 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NxWelcomeComponent } from './nx-welcome.component';
+import { FooterComponent } from '@workspace-mf-federation/ui-lib';
 
 @Component({
-  imports: [CommonModule, NxWelcomeComponent],
+  imports: [CommonModule, FooterComponent],
   selector: 'app-mfefooter-entry',
-  template: `<app-nx-welcome></app-nx-welcome>`,
+  template: `
+    <lib-footer
+      [companyName]="'Mi Empresa'"
+      [logoUrl]="logoUrl">
+    </lib-footer>
+  `,
 })
-export class RemoteEntryComponent {}
+export class RemoteEntryComponent {
+  logoUrl = 'https://img.icons8.com/fluency/96/veterinarian.png';
+  menuItems = [
+    { label: 'Inicio', route: '/' },
+    { label: 'Productos', route: '/productos' }
+  ];
+}
