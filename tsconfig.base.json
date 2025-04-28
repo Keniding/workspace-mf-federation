@@ -33,6 +33,7 @@
       "@workspace-mf-federation/mfui": [
         "apps/angular/mfui/src/app/remote-entry/entry.component.ts"
       ],
+      "@workspace-mf-federation/ui-lib": ["libs/ui-lib/src/index.ts"],
       "mfefooter/Routes": [
         "apps/angular/mfefooter/src/app/remote-entry/entry.routes.ts"
       ],
